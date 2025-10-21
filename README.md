@@ -14,20 +14,20 @@ How the plugin works depends on three parameters:
 * the **default count**: i.e., the default value of _n_.
 
 Assume for example that the hotkey is `<a-r>`. Then, whenever you'll type `<a-r>` in
-Insert Mode, the plugin will prompt you to enter a positive integer (_n_) followed by
+Insert Mode, the plugin will prompt you to enter a positive integer (`_n_`) followed by
 a non-numeric character (`c`). There should be no space between the integer and the
 character, and both can be omitted:
 
-* if you omit everything (i.e., if you just press ENTER at the prompt), then the
+* If you omit everything (i.e., if you just press ENTER at the prompt), then the
 default character will be inserted default-count times.
 
-* if you specify `n` and omit the character, then the default character will be
+* If you specify `n` and omit the character, then the default character will be
 inserted _n_ times, and _n_ **will become the new default count**.
 
-* if you omit the integer and specify `c`, then `c` will be inserted default-count
+* If you omit the integer and specify `c`, then `c` will be inserted default-count
 times, and `c` **will become the new default character**.
 
-* if you specify both an integer `n` and a character `c`, then `c` will be inserted
+* If you specify both an integer `n` and a character `c`, then `c` will be inserted
 _n_ times; also, _n_ will become the new default count, and `c` will become the new
 default character.
 
@@ -38,12 +38,16 @@ The plugin makes it easy to insert ASCII rulers to start a new section of text. 
 for example, the default character is `-` and the defaut count is 60, then pressing
 ENTER after the hotkey will insert:
 
+```
 ------------------------------------------------------------
+```
 
 automatically. If at some point you decide to shorten the ruler to a length
 of 10, then typing `10` and pressing ENTER after the hotkey will insert:
 
+```
 ----------
+```
 
 and this shorter ruler will become the new default.
 
