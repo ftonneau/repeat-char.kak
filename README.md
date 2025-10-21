@@ -14,7 +14,7 @@ How the plugin works depends on three parameters:
 * the **default count**: i.e., the default value of _n_.
 
 Assume for example that the hotkey is `<a-r>`. Then, whenever you'll type `<a-r>` in
-Insert Mode, the plugin will prompt you to enter a positive integer (`_n_`) followed by
+Insert Mode, the plugin will prompt you to enter a positive integer (`n`) followed by
 a non-numeric character (`c`). There should be no space between the integer and the
 character, and both can be omitted:
 
@@ -71,7 +71,7 @@ command.
 # Customization
 
 Aside from the value of the hotkey (customized via `repeat-char-enable`), you can
-customize the initial value of the default character via the `repeat_char_ch` option,
-and the initial value of the default count via the `repeat_char_n` option. Out of the
-box, these equal `-` and 60, respectively.
+customize **the initial value of the default character** via the `repeat_char_ch`
+option, and the **initial value of the default count** via the `repeat_char_n`
+option. Out of the box, these equal `-` and 60, respectively.
 
