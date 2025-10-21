@@ -70,7 +70,7 @@ command.
 
 # Customization
 
-Aside from the value of the hotkey (customized via `repeat-char-enable`), you can
+Aside from the value of the hotkey (customized via `repeat-char-enable-on`), you can
 customize **the initial value of the default character** via the `repeat_char_ch`
 option, and the **initial value of the default count** via the `repeat_char_n`
 option. Out of the box, these equal `-` and 60, respectively.
