@@ -1,13 +1,37 @@
 # repeat-char.kak
 
 This plugin for [Kakoune](https://kakoune.org/) allows you to insert a non-numeric
-character `c` exactly _n_ times in Insert mode.
+character `c` _n_ times in Insert mode.
 
-# Usage
+Character repetition can be done:
 
-How the plugin works depends on three parameters:
+- by **counting**: the chosen character is repeated exacty  _n_ times. Repetition by
+counting can be used to insert constant-length ASCII rulers in a document, as in this
+example:
 
-* the **hotkey**: i.e., the key combination that launches character insertion
+```
+------------------------------------------------------------
+A new section start here.
+...
+```
+
+where the hyphen (`-`) was repeated 60 times.
+
+- by **tracing**: the character is repeated until the end of the added string aligns
+with the end of a heading on the preceding line. Thus, in this example:
+
+```
+Heading level 1
+===============
+```
+
+the last equal sign (`=`) is aligned with `1`.
+
+
+# Repetition by counting
+
+Repetition by counting starts by pressing a **hotkey**. The results depend on two
+parameters:
 
 * the **default character**: i.e., the defaut value of `c`
 
@@ -34,22 +58,49 @@ default character.
 
 # Example: rulers
 
-The plugin makes it easy to insert ASCII rulers to start a new section of text. If,
-for example, the default character is `-` and the defaut count is 60, then pressing
-ENTER after the hotkey will insert:
+If the default character is `-` and the defaut count is 60, then pressing ENTER after
+the hotkey will insert:
 
 ```
 ------------------------------------------------------------
 ```
 
-automatically. If at some point you decide to shorten the ruler to a length
-of 10, then typing `10` and pressing ENTER after the hotkey will insert:
+automatically. If at some point you decide to shorten the ruler to a length of 10,
+then typing `10` and pressing ENTER after the hotkey will insert:
 
 ```
 ----------
 ```
 
 and this shorter ruler will become the new default.
+
+
+# Repetition by tracing
+
+Repetition by tracing starts by pressing the hotkey. After pressing the hotkey, however,
+the plugin prompts you to enter the **same non-numeric character twice**. The plugin
+then repeats this character so as to "underline" the preceding heading.
+
+Notice that repetition by tracing and repetition by counting proceed independently of
+one another. In particular, repetition by tracing **leaves the default count and the
+default character unaffected**.
+
+
+# Example: headings
+
+Assume your cursor is positioned at the start of the line after:
+
+```
+Heading level 1
+
+```
+
+Pressing `<a-r>`, then `==` followed by ENTER will produce:
+
+```
+Heading level 1
+===============
+```
 
 
 # Installation
