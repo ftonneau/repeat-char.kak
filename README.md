@@ -8,7 +8,7 @@ exacty _n_ times, as in this example:
 
 ```
 ------------------------------------------------------------
-A new section start here.
+A new section starts here.
 ...
 ```
 
