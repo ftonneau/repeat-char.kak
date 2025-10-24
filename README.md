@@ -15,8 +15,8 @@ A new section starts here.
 where the hyphen (`-`) is repeated 60 times.
 
 Alternatively, character repetition can be done by **tracing**: the character is
-repeated until it coincides with the end of a heading on the preceding line. Thus,
-in this example:
+repeated until it coincides with the end of the string on the preceding line.
+Thus, in this example:
 
 ```
 Heading level 1
@@ -71,7 +71,7 @@ then typing `10` and pressing ENTER after the hotkey will insert:
 ```
 
 and this shorter ruler will become the new default. Finally, if you type `*` and
-press ENTER after the hotkey, the default ruler will be a ruler of 10 asterisks:
+press ENTER after the hotkey, the default ruler will become a ruler of 10 asterisks:
 
 ```
 **********
@@ -80,9 +80,9 @@ press ENTER after the hotkey, the default ruler will be a ruler of 10 asterisks:
 
 # Repetition by tracing
 
-Repetition by tracing starts by pressing the hotkey. After pressing the hotkey, however,
-the plugin prompts you to enter the **same non-numeric character twice**. The plugin
-then repeats this character so as to "underline" the preceding heading.
+Repetition by tracing starts by pressing the hotkey as usual. The plugin then prompts
+you to enter the **same non-numeric character twice**. On pressing ENTER, the plugin
+will repeat this character so as to "underline" the heading above your cursor.
 
 Notice that repetition by tracing and repetition by counting proceed independently of
 one another. In particular, repetition by tracing **leaves the default count and the
