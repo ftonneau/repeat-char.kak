@@ -1,13 +1,10 @@
 # repeat-char.kak
 
 This plugin for [Kakoune](https://kakoune.org/) allows you to insert a non-numeric
-character `c` _n_ times in Insert mode.
+character `c` a number of times in Insert mode.
 
-Character repetition can be done:
-
-- by **counting**: the chosen character is repeated exacty  _n_ times. Repetition by
-counting can be used to insert constant-length ASCII rulers in a document, as in this
-example:
+Character repetition can be done by **counting**: the chosen character is repeated
+exacty _n_ times, as in this example:
 
 ```
 ------------------------------------------------------------
@@ -15,10 +12,11 @@ A new section start here.
 ...
 ```
 
-where the hyphen (`-`) was repeated 60 times.
+where the hyphen (`-`) is repeated 60 times.
 
-- by **tracing**: the character is repeated until the end of the added string aligns
-with the end of a heading on the preceding line. Thus, in this example:
+Alternatively, character repetition can be done by **tracing**: the character is
+repeated until it coincides with the end of a heading on the preceding line. Thus,
+in this example:
 
 ```
 Heading level 1
@@ -30,7 +28,7 @@ the last equal sign (`=`) is aligned with `1`.
 
 # Repetition by counting
 
-Repetition by counting starts by pressing a **hotkey**. The results depend on two
+Repetition by counting starts by pressing a **hotkey**. The results will depend on two
 parameters:
 
 * the **default character**: i.e., the defaut value of `c`
@@ -42,21 +40,21 @@ Insert Mode, the plugin will prompt you to enter a positive integer (`n`) follow
 a non-numeric character (`c`). There should be no space between the integer and the
 character, and both can be omitted:
 
-* If you omit everything (i.e., if you just press ENTER at the prompt), then the
+* If you omit everything (i.e., if you just press ENTER at the prompt), the
 default character will be inserted default-count times.
 
-* If you specify `n` and omit the character, then the default character will be
+* If you specify `n` and omit the character, the default character will be
 inserted _n_ times, and _n_ **will become the new default count**.
 
-* If you omit the integer and specify `c`, then `c` will be inserted default-count
+* If you omit the integer and specify `c`, `c` will be inserted default-count
 times, and `c` **will become the new default character**.
 
-* If you specify both an integer `n` and a character `c`, then `c` will be inserted
-_n_ times; also, _n_ will become the new default count, and `c` will become the new
+* If you specify both an integer `n` and a character `c`, `c` will be inserted
+_n_ times, _n_ will become the new default count, and `c` will become the new
 default character.
 
 
-# Example: rulers
+# Example 
 
 If the default character is `-` and the defaut count is 60, then pressing ENTER after
 the hotkey will insert:
@@ -72,7 +70,12 @@ then typing `10` and pressing ENTER after the hotkey will insert:
 ----------
 ```
 
-and this shorter ruler will become the new default.
+and this shorter ruler will become the new default. Finally, to replace the 10
+hyphens by 10 asterisks, type `*` and ENTER after the hotkey:
+
+```
+**********
+```
 
 
 # Repetition by tracing
@@ -86,7 +89,7 @@ one another. In particular, repetition by tracing **leaves the default count and
 default character unaffected**.
 
 
-# Example: headings
+# Example 
 
 Assume your cursor is positioned at the start of the line after:
 
