@@ -70,8 +70,8 @@ then typing `10` and pressing ENTER after the hotkey will insert:
 ----------
 ```
 
-and this shorter ruler will become the new default. Finally, to replace the 10
-hyphens by 10 asterisks, type `*` and ENTER after the hotkey:
+and this shorter ruler will become the new default. Finally, if you type `*` and
+press ENTER after the hotkey, the default ruler will be a ruler of 10 asterisks:
 
 ```
 **********
